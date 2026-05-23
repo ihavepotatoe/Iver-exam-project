@@ -1,6 +1,8 @@
 import { headerBtnResuable } from "../cart/cartLogic.js";
 headerBtnResuable();
 
+const headerBtn = document.getElementById("header-btn");
+
 const productMessage = document.getElementById("product-message");
 productMessage.textContent = "Loading product";
 const CART_KEY = "examProjectCart";
