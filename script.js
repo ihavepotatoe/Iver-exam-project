@@ -44,7 +44,7 @@ fetch("https://v2.api.noroff.dev/online-shop")
         card.classList.add("product-card");
 
         card.innerHTML = `
-        <a href="/product/index.html?id=${product.id}">
+        <a href="product/index.html?id=${product.id}">
         <img src="${product.image.url}" alt="${product.title}">
         <h3>${product.title}</h3>
         <p>${product.price} NOK</p>
