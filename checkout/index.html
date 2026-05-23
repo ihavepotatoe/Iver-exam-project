@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="checkout.js" defer></script>
+  </head>
+  <body>
+    <main class="checkout-page">
+      <a href="../cart/index.html" id="back-arrow" class="back-arrow">←</a>
+      <form id="checkout-form">
+        <section class="delivery-info">
+          <h2>Delivery info</h2>
+
+          <div class="delivery-input">
+            <label for="Full name">Full name</label>
+            <input type="text" placeholder="Full name" required />
+
+            <label for="Adress">adress</label>
+            <input type="text" placeholder="Adress" required />
+
+            <label for="City">City</label>
+            <input type="text" placeholder="City" required />
+
+            <label for="postal code">postal code</label>
+            <input type="text" placeholder="Postal code" required />
+          </div>
+        </section>
+
+        <section class="payment-info">
+          <h2>Payment option</h2>
+
+          <div class="payment-options">
+            <label>
+              <input type="radio" name="Payment" value="mastercard" />
+              mastercard
+            </label>
+
+            <label>
+              <input type="radio" name="Payment" value="visa" />
+              visa
+            </label>
+          </div>
+
+          <div id="card-info">
+            <label for="card-holder">card holder</label>
+            <input id="card-holder" type="text" required />
+
+            <label for="card-number">card number</label>
+            <input id="card-number" type="text" required />
+
+            <label for="expiration-date">expiration date</label>
+            <input id="expiration-date" type="text" required />
+          </div>
+          <p id="message"></p>
+          <button type="submit" id="pay-btn">complete payment</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>

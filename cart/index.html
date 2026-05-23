@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="cart.js" defer></script>
+  </head>
+  <body>
+    <main class="cart-page">
+      <a id="back-arrow" href="../index.html">←</a>
+
+      <section class="cart-layout">
+        <div id="cart-items"></div>
+
+        <aside class="cart-summary">
+          <h2>Your total</h2>
+          <p id="cart-total"></p>
+          <button id="checkout-btn">
+            <a href="/checkout/index.html"> Proceed to checkout </a>
+          </button>
+        </aside>
+        <button id="clear-cart-btn">Clear cart</button>
+      </section>
+    </main>
+  </body>
+</html>
