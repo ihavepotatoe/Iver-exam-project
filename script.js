@@ -84,13 +84,13 @@ fetch("https://v2.api.noroff.dev/online-shop")
         gridCard.classList.add("product-card");
 
         gridCard.innerHTML = `
-        <a href="/product/index.html?id=${product.id}">
+        <a href="product/index.html?id=${product.id}">
         <img src="${product.image.url}" alt="${product.title}">
         <h3>${product.title}</h3>
         <p>${product.price} NOK</p>
         </a>
 
-        ${token ? `<button class="add-btn">Ad to cart</button>` : ""}
+        ${token ? `<button class="add-btn">Add to cart</button>` : ""}
 `;
         gridContainer.appendChild(gridCard);
 
