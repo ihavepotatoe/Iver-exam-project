@@ -1,8 +1,4 @@
 import { addProductToCart } from "./cart/cartLogic.js";
-import { headerBtnResuable } from "./cart/cartLogic.js";
-headerBtnResuable();
-
-const headerBtn = document.getElementById("header-btn");
 
 console.log("js is running");
 const container = document.getElementById("product-list");
@@ -11,6 +7,16 @@ const gridContainer = document.getElementById("product-grid");
 const token = localStorage.getItem("token");
 
 const CART_KEY = "examProjectCart";
+
+const headerBtn = document.getElementById("header-btn");
+
+if (token) {
+  headerBtn.textContent = "View cart";
+  headerBtn.href = "cart/index.html";
+} else {
+  headerBtn.textContent = "Log in";
+  headerBtn.href = "account/login.html";
+}
 
 container.innerHTML = "<p>Loading featured products...</p>";
 gridContainer.innerHTML = "<p>Loading products </p>";

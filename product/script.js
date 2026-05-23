@@ -1,6 +1,3 @@
-import { headerBtnResuable } from "../cart/cartLogic.js";
-headerBtnResuable();
-
 const headerBtn = document.getElementById("header-btn");
 
 const productMessage = document.getElementById("product-message");
@@ -8,6 +5,15 @@ productMessage.textContent = "Loading product";
 const CART_KEY = "examProjectCart";
 
 const token = localStorage.getItem("token");
+
+if (token) {
+  headerBtn.textContent = "View cart";
+  headerBtn.href = "../cart/index.html";
+} else {
+  headerBtn.textContent = "Log in";
+  headerBtn.href = "../account/login.html";
+}
+
 const cartBtn = document.getElementById("cart-btn");
 
 const params = new URLSearchParams(window.location.search);
@@ -39,7 +45,7 @@ fetch(`https://v2.api.noroff.dev/online-shop/${id}`)
           id: product.id,
           title: product.title,
           price: product.price,
-          image: product.image.url || "",
+          image: product.image?.url || "",
           quantity: 1,
         });
       }
@@ -54,7 +60,7 @@ fetch(`https://v2.api.noroff.dev/online-shop/${id}`)
 
 function renderPage(product) {
   document.getElementById("title").textContent = product.title;
-  document.getElementById("image").src = product.image.url || "";
+  document.getElementById("image").src = product.image?.url || "";
   document.getElementById("description").textContent = product.description;
   document.getElementById("price").textContent = product.price + " NOK";
   if (token) {

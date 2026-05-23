@@ -19,18 +19,3 @@ export function addProductToCart(product) {
   localStorage.setItem(CART_KEY, JSON.stringify(cart));
   alert("product added to cart!");
 }
-
-export function headerBtnResuable() {
-  const headerBtn = document.getElementById("header-btn");
-
-  const token = localStorage.getItem("token");
-  if (!headerBtn) return;
-
-  if (token) {
-    headerBtn.textContent = "View cart";
-    headerBtn.href = "cart/index.html";
-  } else {
-    headerBtn.textContent = "Log in";
-    headerBtn.href = "../account/login.html";
-  }
-}
