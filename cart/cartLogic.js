@@ -28,9 +28,9 @@ export function headerBtnResuable() {
 
   if (token) {
     headerBtn.textContent = "View cart";
-    headerBtn.href = "cart/index.html";
+    headerBtn.href = "../cart/index.html";
   } else {
     headerBtn.textContent = "Log in";
-    headerBtn.href = "account/login.html";
+    headerBtn.href = "../account/login.html";
   }
 }
